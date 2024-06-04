@@ -14,6 +14,7 @@
 		44AD10942C0EFB6B0090CF5F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 44AD10932C0EFB6B0090CF5F /* Base */; };
 		44AD10A02C0EFDC00090CF5F /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD109F2C0EFDC00090CF5F /* SignViewController.swift */; };
 		44AD10A22C0EFEA60090CF5F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD10A12C0EFEA60090CF5F /* MainTabBarController.swift */; };
+		44AD10A52C0F0D2E0090CF5F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 44AD10A42C0F0D2E0090CF5F /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44AD10A52C0F0D2E0090CF5F /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +120,9 @@
 			dependencies = (
 			);
 			name = Yunflix;
+			packageProductDependencies = (
+				44AD10A42C0F0D2E0090CF5F /* SnapKit */,
+			);
 			productName = Yunflix;
 			productReference = 44AD10842C0EFB6A0090CF5F /* Yunflix.app */;
 			productType = "com.apple.product-type.application";
@@ -146,6 +151,9 @@
 				Base,
 			);
 			mainGroup = 44AD107B2C0EFB6A0090CF5F;
+			packageReferences = (
+				44AD10A32C0F0D2E0090CF5F /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 44AD10852C0EFB6A0090CF5F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -399,6 +407,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		44AD10A32C0F0D2E0090CF5F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		44AD10A42C0F0D2E0090CF5F /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44AD10A32C0F0D2E0090CF5F /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 44AD107C2C0EFB6A0090CF5F /* Project object */;
 }

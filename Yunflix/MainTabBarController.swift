@@ -13,8 +13,14 @@ final class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.delegate = self
+        configureTabBar()
         configureViewController()
+    }
+    
+    func configureTabBar() {
+        self.tabBar.tintColor = .white
+        self.tabBar.isTranslucent = true
+        self.delegate = self
     }
     
     private func configureViewController() {
@@ -27,16 +33,6 @@ final class MainTabBarController: UITabBarController {
         
         //탭바 컨트롤러에 뷰 컨트롤러 추가
         self.viewControllers = [homeVC, signVC]
-        
-        //탭바 설정
-        let appearance = UITabBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .clear
-        
-        self.tabBarController?.tabBar.standardAppearance = appearance
-        self.tabBarController?.tabBar.scrollEdgeAppearance = appearance
-        
-        self.tabBarController?.tabBar.tintColor = .white
     }
     
     //MARK: - Functions
@@ -65,10 +61,6 @@ final class MainTabBarController: UITabBarController {
         
         return naviVC
     }
-
-    
-    
-    
 }
 
 //MARK: - UITabBarControllerDelegate
