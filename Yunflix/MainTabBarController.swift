@@ -19,7 +19,8 @@ final class MainTabBarController: UITabBarController {
     
     private func configureViewController() {
         //홈 컨트롤러
-        let homeVC = makeController(tabBarTitle: "홈", unselectedImage: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"), rootViewController: HomeViewController())
+        let homeVC = makeNaviController(unselectedImage: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"), rootViewController: HomeViewController())
+        homeVC.tabBarItem.title = "홈"
         
         //회원가입 컨트롤러
         let signVC = makeController(tabBarTitle: "가입", unselectedImage: UIImage(systemName: "person"), selectedImage: UIImage(systemName: "person.fill"), rootViewController: SignViewController())
@@ -27,8 +28,15 @@ final class MainTabBarController: UITabBarController {
         //탭바 컨트롤러에 뷰 컨트롤러 추가
         self.viewControllers = [homeVC, signVC]
         
-        //탭바 틴트 색상
-        self.tabBar.tintColor = .white
+        //탭바 설정
+        let appearance = UITabBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .clear
+        
+        self.tabBarController?.tabBar.standardAppearance = appearance
+        self.tabBarController?.tabBar.scrollEdgeAppearance = appearance
+        
+        self.tabBarController?.tabBar.tintColor = .white
     }
     
     //MARK: - Functions
