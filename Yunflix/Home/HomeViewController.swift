@@ -140,7 +140,7 @@ final class HomeViewController: UIViewController {
         
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = .black
-        
+        appearance.backgroundEffect = UIBlurEffect(style: .light)
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont.boldSystemFont(ofSize: 20)]
         
         navigationController?.navigationBar.tintColor = .white

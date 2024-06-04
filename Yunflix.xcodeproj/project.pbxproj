@@ -61,9 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				44AD109B2C0EFD120090CF5F /* Application */,
-				44AD10A12C0EFEA60090CF5F /* MainTabBarController.swift */,
 				44AD109E2C0EFD6A0090CF5F /* Login */,
 				44AD109D2C0EFD5D0090CF5F /* Home */,
+				44AD10A12C0EFEA60090CF5F /* MainTabBarController.swift */,
 				44AD109C2C0EFD220090CF5F /* Resources */,
 			);
 			path = Yunflix;

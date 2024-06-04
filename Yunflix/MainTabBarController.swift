@@ -47,13 +47,6 @@ final class MainTabBarController: UITabBarController {
         let naviVC = UINavigationController(rootViewController: rootViewController)
         naviVC.tabBarItem = UITabBarItem(title: tabBarTitle, image: unselectedImage, selectedImage: selectedImage)
         
-        naviVC.navigationBar.tintColor = .white
-        let appearance = UINavigationBarAppearance()
-        appearance.backgroundEffect = UIBlurEffect(style: .light)
-        naviVC.navigationBar.isTranslucent = true
-        naviVC.navigationBar.standardAppearance = appearance
-        naviVC.navigationBar.scrollEdgeAppearance = appearance
-        
         return naviVC
     }
 }
